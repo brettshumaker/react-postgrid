@@ -1,0 +1,95 @@
+/** Post Grid Items **/
+ul.posts-grid {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.posts-grid li {
+	width: 45%;
+	position: relative;
+}
+
+ul.posts-grid li h3 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: .5em .25em .75em .5em;
+	background: rgba(255,255,255,.6);
+	font-size: 15px;
+	line-height: 18px;
+	opacity: 0;
+	transition: opacity .25s ease-in-out;
+}
+
+ul.posts-grid li:hover h3 {
+	opacity: 1;
+}
+
+/** Post Grid Pagination **/
+ul.posts-grid-pagination {
+	display: block;
+	padding: 2em 0 1em;
+	list-style: none;
+}
+
+ul.posts-grid-pagination li {
+	display: inline-block;
+	border: thin solid #d6d6d6;
+	padding: .25em .5em;
+	background: #fff;
+	color: #111;
+}
+ul.posts-grid-pagination li:not(:last-child) {
+	border-right: none;
+}
+
+ul.posts-grid-pagination li:first-child {
+	border-radius: 3px 0 0 3px;
+}
+
+ul.posts-grid-pagination li:last-child {
+	border-radius: 0 3px 3px 0;
+}
+
+ul.posts-grid-pagination li,
+ul.posts-grid-pagination li a {
+	text-decoration: none;
+	box-shadow: none;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+}
+
+ul.posts-grid-pagination li a:focus,
+ul.posts-grid-pagination li a:hover,
+ul.posts-grid-pagination li a:active {
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
+ul.posts-grid-pagination li.active,
+ul.posts-grid-pagination li:hover {
+	background: #2999f7;
+}
+
+ul.posts-grid-pagination li.active a,
+ul.posts-grid-pagination li:hover a {
+	color: #fff
+}
+
+/** Disabled Pagination **/
+ul.posts-grid-pagination li.disabled {
+	opacity: .4;
+	cursor: default;
+	background: #fff !important;
+}
+
+ul.posts-grid-pagination li.disabled a {
+	cursor: default;
+	color: #111 !important
+}
