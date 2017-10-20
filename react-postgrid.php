@@ -6,7 +6,7 @@ Description: Provides a shortcode that renders a posts grid in react. Choose a c
 Version: 1.0
 Author: Brett Shumaker
 Author URI: https://brettshumaker.com/
-License: GPL2
+License: GPLv3
 */
 
 function reactjs_display() {
